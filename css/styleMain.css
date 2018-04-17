@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  background: #D7CEC7;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Style the navbar*/
+#navbar {
+  overflow: hidden;
+}
+
+/* navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #565656;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-family: 'Satisfy',cursive;
+}
+
+/* The sticky class */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Showcase */
+#showcase {
+  background-image: url('../img/showcase.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+/* Core Styles */
+h1 {
+  font-family: 'Satisfy',cursive;
+  font-size: 75px;
+  color: #76323F;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 1em 0.5em;
+  text-align: center;
+  font-family: 'Bad Script',cursive;
+  font-size: 36px;
+}
+
+p {
+  margin: 0;
+  padding: 1em 0.5em;
+  font-family: 'Bad Script',cursive;
+  font-size: 18px;
+}
