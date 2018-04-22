@@ -90,7 +90,7 @@ h2 {
 }
 
 .content-wrap {
-  padding: 0 1.5em;
+  padding: 0.5em 1.5em;
 }
 
 #section-a,
@@ -101,6 +101,7 @@ h2 {
   background-size: cover;
   background-position: center;
   height: 100vh;
+
 }
 
 #section-a img {
@@ -126,8 +127,41 @@ h2 {
   padding: 1.5em;
 }
 
+.container {
+  max-width: 760px;
+  margin: auto;
+  border: #fff solid 3px;
+  background: #D7CEC7;
+}
+
+.main-img img {
+  width: 100%;
+  display: block;
+  margin: 0px auto;
+}
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 5px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
 footer {
-  padding: 1em;
+  padding-top: 10em;
   color: #565656;
   text-align: center;
 }

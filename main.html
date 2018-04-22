@@ -35,7 +35,7 @@
     <section id="section-a" class="grid">
       <div class="content-wrap">
         <h2 class="content-title">AboutMe</h2>
-        <img src="img/jasmine.jpg" alt="" class="aboutme">
+        <img src="img/jasmine.jpg" alt="">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium velit praesentium vero libero eaque qui numquam adipisci iusto expedita? Nostrum repellendus omnis quibusdam expedita impedit nemo illo, dolore fugiat hic voluptas corporis cupiditate tempore laborum illum quod doloremque, laboriosam enim!</p>
       </div>
     </section>
@@ -83,10 +83,45 @@
     <section id="section-d" class="grid">
       <div class="content-wrap">
         <h2 class="content-title">Gallery</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium velit praesentium vero libero eaque qui numquam adipisci iusto expedita? Nostrum repellendus omnis quibusdam expedita impedit nemo illo, dolore fugiat hic voluptas corporis cupiditate tempore laborum illum quod doloremque, laboriosam enim!</p>
+        <div class="container">
+          <div class="main-img">
+            <img src="img/img1.jpg" id="current">
+          </div>
+
+          <div class="imgs">
+            <img src="img/img1.jpg">
+            <img src="img/img2.jpg">
+            <img src="img/img1.jpg">
+            <img src="img/img2.jpg">
+            <img src="img/img1.jpg">
+            <img src="img/img2.jpg">
+            <img src="img/img1.jpg">
+            <img src="img/img2.jpg">
+          </div>
+        </div>
       </div>
     </section>
+    <script>
+      const current = document.querySelector('#current');
+      const imgs = document.querySelectorAll('.imgs img');
+      const opacity = 0.6;
+      //set first image opacity
+      imgs[0].style.opacity = opacity;
+      imgs.forEach(img => img.addEventListener('click',imgClick));
 
+      function imgClick(e) {
+        //reset the opacity
+        imgs.forEach(img => (img.style.opacity = 1));
+        //change current image to src of clicked image
+        current.src = e.target.src;
+        //add fade in class
+        current.classList.add('fade-in');
+        //remove fade in class after 0.5 seconds
+        setTimeout(() => current.classList.remove('fade-in'),500);
+        //change the opacity to opacity var
+        e.target.style.opacity = opacity;
+      }
+    </script>
   </main>
 
   <footer id="main-footer" class="grid">
